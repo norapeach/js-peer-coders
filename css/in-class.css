@@ -1,18 +1,33 @@
-html {
+body {
     background-color: #a1a1a1;
 }
 
-body {
-    background-color: #076d86;
+h1 {
+    text-align: center;
 }
 
 form {
     width: 40%;
+    background-color: #076d86;
     margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
 }
 
-label {
+label, input[type=submit] {
     display: block;
+}
+
+input, label, select {
+    margin-bottom: 10px;
+}
+
+form span:first-of-type {
+    margin-right: 5px;
+}
+
+form span:last-of-type {
+    margin-left: 5px;
 }
 
 
