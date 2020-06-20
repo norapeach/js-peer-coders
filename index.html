@@ -1,4 +1,4 @@
-<!-- See tip-calculator.js for version notes -->
+<!-- See : Incomplete version -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,17 +15,18 @@
        <main>
            <h1>Tip Calculator</h1>
            <form method= "POST" action=".">
-               <label for="currency">How much was your bill?</label>
-               <span>$</span><input type="number" name="currency" id="currency" placeholder="Bill amount?">
+               <label for="currency">Enter your bill amount:</label>
+               <span>$</span><input type="number" min="0.01" step="0.01" name="currency" id="currency" placeholder="How much is the total?" required>
                <label for="service" class="service">How was your service?</label>
-               <select id="service" name="service" class="service">
+               <select id="service" name="service" class="service" required>
                    <option value="ex">Excellent</option>
                    <option value="good">Good</option>
                    <option value="fair">Fair</option>
                    <option value="bad">Needs Improvement</option>
                </select>
                <label for="people" class="people">How many people are sharing the bill?</label>
-               <input type="text" name="people" id="people" class="people" placeholder="Number of people"><span class="people">people</span>
+               <input type="number" min="1" max="20" name="people" id="people" class="people" placeholder="Number of people"><span class="people" required>people</span>
+               <!-- 6/19: add constraints to input type=number; mdn docs example of html constraints for validation -->
                <input type="submit" value="Calculate">
            </form>
         </main>
